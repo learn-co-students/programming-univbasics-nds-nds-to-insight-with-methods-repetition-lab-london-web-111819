@@ -1,4 +1,4 @@
-# Derive Insight from NDS Using Methods...Repeated
+ ive tried to use # Derive Insight from NDS Using Methods...Repeated
 
 ## Learning Goals
 
