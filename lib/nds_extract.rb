@@ -51,8 +51,6 @@ def total_gross(source)
     i += 1
   end 
   total
-    
-  total
   # return the total
 end
 
