@@ -26,9 +26,27 @@ end
 
 def list_of_directors(source)
   # Write this implementation
+  # pp source
+  directors_list = []
+  source.each do |director_name_hash|
+    directors_list << director_name_hash[:name]
+  end
+   directors_list
 end
 
 def total_gross(source)
+
+  gross = 0
+    result = {}
+    directors_database.each do |director|
+      director[:movies].each do |movie|
+      gross += movie[:worldwide_gross]
+      end
+      result[director[:name]] = gross
+    end
+      gross
+
+
   # Write this implementation
   #
   # Should use methods:
@@ -39,5 +57,3 @@ def total_gross(source)
   # returned by directors_totals, and add it to a running total. When done,
   # return the total
 end
-
-
