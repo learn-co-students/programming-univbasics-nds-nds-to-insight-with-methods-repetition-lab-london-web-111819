@@ -26,6 +26,13 @@ end
 
 def list_of_directors(source)
   # Write this implementation
+  directors_Array = Array.new
+  director_i = 0
+  while director_i < source.length do
+    directors_Array.push(source[director_i][:name])
+    director_i += 1
+  end
+  directors_Array
 end
 
 def total_gross(source)
@@ -33,11 +40,17 @@ def total_gross(source)
   #
   # Should use methods:
   # 1. directors_totals: returns a Hash of { dir_name => gross }
-  # 2. list_of_directors: names provides an Array of directors names (use
+  # 2. list_of_directors: names provides an Array of  directors names (use
   #
   # Visit each key (i.e. director name), look up the value in the hash
   # returned by directors_totals, and add it to a running total. When done,
   # return the total
+  grossTotal = 0
+  index = 0
+  while index < source.length do
+    director_name = list_of_directors(source)[index]
+    grossTotal += directors_totals(source)[director_name]
+    index += 1
+  end
+  grossTotal
 end
-
-
